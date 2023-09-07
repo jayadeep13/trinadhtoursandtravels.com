@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trinadh-Contact Us</title>
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/QNXMVXm/logo-modified.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="cars.css">
+<style>
+    .reveal{
+      position: relative;
+      transform: translateY(150px);
+      opacity: 0;
+      transition: all 2s ease;
+    }
+    .reveal.active{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+   
+  </style>
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+              <img style="width: 80px; height: 80px; border-radius: 50%;" class="imagelog" src="https://i.ibb.co/QNXMVXm/logo-modified.png">
+              <a class="navbar-brand" href="#">&nbsp;Trinadh Tours and Travels</a>
+              <ul class="navbar-nav mx-auto mt-2 mt-lg-0 justify-content-center" > <!-- Added mx-auto and justify-content-center classes -->
+                  <li class="nav-item active" >
+                      <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="aboutus.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="contact us.html"><span class="sr-only">(current)</span>Contact</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="carslist.html">Our Cars</a>
+                  </li>
+                 
+              </ul>
+         
+              <a href="https://api.whatsapp.com/send/?phone=918698209999&text&type=phone_number&app_absent=0" class="btn btn-outline-success my-2 my-sm-0">Book Now</a>
+  
+              </form>
+          </div>
+      </nav>
+  
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <!-- Your content goes here -->
+<style>
+ 
+
+</style>
+<div class="cominter">
+      
+    <h4>Trinadh Tour's & Travels 
+    <span class="animated-text" id="changingText"></span></h4>
+</div>
+
+<script>
+    const textOptions = ["100+ Vehicles !", "Luxury Cars !","Affordable Rentals !"];
+    let currentIndex12 = 0;
+    const textElement = document.getElementById("changingText");
+
+    function typeText(text, index = 0) {
+        if (index < text.length) {
+            textElement.textContent = text.substring(0, index + 1);
+            setTimeout(() => typeText(text, index + 1), 100); // Adjust typing speed as needed
+        } else {
+            setTimeout(() => {
+                textElement.classList.remove("animated-text");
+                textElement.classList.add("animated-text"); // Restart animation
+                changeText();
+            }, 2000); // Wait for 2 seconds before changing text
+        }
+    }
+
+    function changeText() {
+        const currentText = textOptions[currentIndex12];
+        currentIndex12 = (currentIndex12 + 1) % textOptions.length;
+        typeText(currentText);
+    }
+
+    changeText(); // Start the animation
+</script>
+
+ </div>
+
+ <div class="form-image-container reveal">
+        
+    <div class="form-container reveal">
+        <h1 style="font-size: 24px;
+    color: #f19000; ;
+    margin-bottom: 10px;
+    font-size: 43px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 1.2px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    text-align: center;">CONTACT US</h1>
+        <form id="form" action="https://formspree.io/f/maygjlbr" method="POST">
+            <!-- Your form fields go here -->
+          
+            <div class="container">
+                
+                <div class="box reveal">
+                    &nbsp;
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                      
+                    <label for="phone">Contact:</label>
+                    <input type="text" name="contact" id="contact" placeholder="Enter your contact" required>  
+                        
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Enter your email" name="email" required>
+        
+                    <label for="message">Message:</label>
+                    <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Enter the message"required></textarea>
+                             
+                              <input type="submit"class="btn" id="btn"value="Send Message" >
+                          &nbsp;
+                          &nbsp;
+                      </div>
+                  </div>
+                  &nbsp;
+                          &nbsp;
+                </form>
+    </div>
+    <div class="animimg reveal">
+        <!-- Your image goes here -->
+        <img src="https://i.ibb.co/9s5PTQh/girls.png" alt="Businesswoman">
+    </div>
+</div>
+
+
+        
+<!-- Your existing scripts and stylesheets here -->
+
+
+ <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+.cominter h4 {
+             /* Adjust the font size */
+            color: #020202; /* Change the text color */
+            animation: fadeIn 2s ease-in-out; /* Add animation */
+           padding-right: 10px;
+            font-weight: bold;
+            font-size: 55px;
+            margin-top: 50px;
+           
+          
+        }
+      h1 {
+        text-align: center;
+      }
+
+      /* Form styles */
+      form {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f8f8f8;
+        border: 1px solid #ddd;
+      animation: fade-in 0.8s ease-in-out;
+}
+    @keyframes fade-in {
+          0% { opacity: 0; }
+          50%{opacity: 0.5;}
+          100% { opacity: 1; }
+        } 
+
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        resize: none;
+      }
+
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+
+      .error {
+        color: red;
+        margin-bottom: 10px;
+      }
+   .menu{
+    background-color:  #0f4c5c ;
+   }
+  
+
+   .iframe{
+  width: 100%;
+touch-action: pan-x pan-y;
+}
+@media screen and (max-width: 768px) {
+  .iframe{
+    width: 100%;
+  }
+  
+.cominter h4 {
+             /* Adjust the font size */
+            color: #020202; /* Change the text color */
+            animation: fadeIn 2s ease-in-out; /* Add animation */
+           padding-right: 10px;
+            font-weight: bold;
+            font-size: 28px;
+            margin-top: 10px;
+           
+          
+        }
+}   
+</style>
+<style>
+    /* Your existing CSS styles here */
+
+    /* Additional styles for form and image layout */
+    .form-image-container  {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 150px;
+        max-width: 100%;
+        padding-left: 180px;
+        
+    }
+
+    .form-container {
+        flex: 1;
+        padding: 20px;
+        background-color: #f8f8f8;
+        border: 1px solid #0f4c5c;
+        animation: fade-in 0.8s ease-in-out;
+      
+    }
+
+    .form-container form {
+        padding: 0;
+        margin: 0;
+
+    }
+
+    .animimg {
+        flex: 1;
+        text-align: right;
+       padding-top: 180px;
+     
+    }
+
+    .animimg img {
+        max-width: 100%;
+        height: auto;
+        
+    }
+
+    .mobile-label {
+        display: none;
+    }
+    .form-container {
+            order: 1;
+        }
+        .animimg {
+            order: 2;
+            text-align: center;
+        }
+
+    @media (max-width: 768px) {
+        .form-image-container {
+            flex-direction: column;
+            padding-top:0px;
+        }
+
+        .form-container {
+            order: 2;
+        }
+
+        .animimg {
+            order: 1;
+            text-align: center;
+            padding-top: 0;
+        }
+
+        .animimg img {
+            max-width: 100%;
+            height: auto;
+            padding-top: 0;
+        }
+
+        .mobile-label {
+            display: block;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #0f4c5c;
+        }
+        .form-image-container  {
+       
+        padding-left: 0%;
+        max-width: 100%;
+        
+        
+    }
+    }
+
+    @keyframes fade-in {
+        0% { opacity: 0; }
+        50% { opacity: 0.5; }
+        100% { opacity: 1; }
+    }
+</style>
+<link
+rel="stylesheet"
+href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+crossorigin="anonymous"
+/>
+<footer>
+  <div class="container reveal">
+  <div class="sec aboutus">
+    <h2 style="text-align: left;padding-top: 0%">Location</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15216.10016027439!2d80.6023082!3d16.5238806!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35ef7774ea491d%3A0xcc434220c944b901!2sTrinadh%20tours%20and%20travels!5e0!3m2!1sen!2sin!4v1563458123311!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+    
+    <ul class="sci">
+      <li>
+        <a href="https://www.facebook.com/profile.php?id=61551121944330&mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
+      </li>
+      
+      <li>
+        <a href="https://instagram.com/trinadhtoursandtravels?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=="><i class="fab fa-instagram"></i></a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/channel/UCf3Sx0KP91T-MJjdLYaEunA"><i class="fab fa-youtube"></i></a>
+      </li>
+      <li>
+        <a href="mailto:Trinadhtoursandtravels@gmail.com">
+          <img src="https://i.ibb.co/qphmBbT/maillog.png"style="width: 12px;heigth:15px"; alt="Gmail Logo">
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="sec quicklink">
+   
+  <div class="sec contact">
+     
+    <h2 style="text-align: left; padding-top: 0%;">Contact Us</h2>
+    <ul class="info">  
+      <li> 
+        <span><i class="fad fa-map-marker-alt"></i></span>
+        <p>
+         1-3-198, Cement Road</br>Beside Sachivalayam</br>
+          Vidhyadharapuram</br>
+          Vijayawada-520004
+        </p>
+      </li>                    
+      <li>
+          
+        <span><i class="fad fa-phone"></i></span>
+        <p>
+          <a href="tel:+919493928241">+91 8698209999</a> <br />
+          <a href="tel:+919441411137">+91 8885277553</a>
+        </p>
+      </li>
+      <li>
+        <span><i class="fad fa-envelope"></i></span>
+        <p>
+          <a href="mailto:TRINADHTOURSANDTRAVELS@GMAIL.COM">Trinadhtoursandtravels@gmail.com</a>
+  
+          
+        </p>
+      </li> 
+    </ul> 
+  </div>
+  </div>
+  
+    <div class="logo-container">
+      <a href="index.html"><img src="https://i.ibb.co/QNXMVXm/logo-modified.png" alt="log" class="logo123"></a>
+    </div>
+  
+  </footer>
+<div class="copyrightText">
+  <p>@ 2023 Trinadh Tours and Travels | Designed By JS Projects.</p>
+  </div>
+    <script type="text/javascript">
+      window.addEventListener('scroll', reveal);
+    
+      function reveal() {
+        var reveals = document.querySelectorAll('.reveal');
+    
+        for (var i = 0; i < reveals.length; i++) {
+    
+          var windowheight = window.innerHeight;
+          var revealtop = reveals[i].getBoundingClientRect().top;
+          var revealpoint = 150;
+    
+          if (revealtop < windowheight - revealpoint) {
+            reveals[i].classList.add('active');
+          } else {
+            reveals[i].classList.remove('active');
+          }
+        }
+      }
+    </script>
+  </body>
+</head>
+  </hmtl>

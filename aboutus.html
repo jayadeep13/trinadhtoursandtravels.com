@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/QNXMVXm/logo-modified.png">
+    <title>Triandh-About us</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cars.css">
+</head>
+<style>
+          .image-container {
+            width: 120px; /* Adjust the size of the circular background */
+            height: 120px; /* Adjust the size of the circular background */
+            border-radius: 50%; /* Create a circular shape */
+            background-color: #8f2121; /* Background color for the circular container */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 20px; /* Adjust the margin as needed */
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 50%; /* Ensure the image is also circular */
+        }
+
+  .parallax {
+   height: 300px;
+   background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-image: url('https://i.ibb.co/jL6Q062/Short-Term-Car-Rental.webp');
+   position: relative; /* Make sure the div is positioned relative for absolute positioning of text */
+
+   
+ }
+ *{
+   margin: 0%;
+   padding: 0%;
+ }
+
+ .parallax::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background color */
+   z-index: 1; /* Place it above the image */
+ }
+
+ .parallax-text {
+   position: absolute;
+   top: 50%; /* Adjust as needed to vertically center the text */
+   left: 50%; /* Adjust as needed to horizontally center the text */
+   transform: translate(-50%, -50%);
+   text-align: center;
+   color: #fff; /* Text color */
+   z-index: 2; /* Place it above the semi-transparent background */
+   white-space: nowrap;
+ }
+ @font-face {
+ font-family: 'CustomFont'; /* Choose a name for your font */
+ src: url('path-to-your-font.woff2') format('woff2'), /* Path to your font file */
+      url('path-to-your-font.woff') format('woff'); /* Path to your font file */
+ font-weight: normal;
+ font-style: normal;
+}
+
+ .parallax-text h1 {
+   font-family: 'CustomFont'; /* Choose a name for your font */
+   src:url('path-to-your-font.woff') format('woff');
+ font-size: 38px;
+ font-weight: 800;
+ text-shadow: 1px 1px 2px rgba(209, 205, 186, 0.719);
+ color: rgb(252, 250, 247);
+ 
+ 
+ /* Use the custom font followed by fallback fonts */
+}
+
+
+.parallax-text {
+   font-size: 52px;
+   font-weight: 900;
+   text-shadow: 1px 1px 2px rgba(158, 157, 152, 0.719);
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                                               
+ }
+
+ /* Change the color for "YOUR" */
+ .your-text {
+   color:  rgb(255, 187, 0); /* Replace with your desired color code or color name */
+ }
+
+ /* Change the color for "CAR" */
+ .carfu-text {
+   color:  rgb(255, 187, 0); /* Replace with your desired color code or color name */
+ }
+
+
+ @media (max-width: 768px) {
+  
+   
+   .parallax-text h1 {
+     font-size: 24px; /* Decrease font size for mobile */
+     padding-bottom:20%;
+   }
+   
+   .parallax-text h2 {
+     font-size: 22px; /* Decrease font size for mobile */
+   }
+   
+  .parallax{
+   height: 200px;
+  }
+ }
+
+ 
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <img style="width: 80px; height: 80px; border-radius: 50%;" class="imagelog" src="https://i.ibb.co/QNXMVXm/logo-modified.png">
+            <a class="navbar-brand" href="#">&nbsp;Trinadh Tours and Travels</a>
+            <ul class="navbar-nav mx-auto mt-2 mt-lg-0 justify-content-center" > <!-- Added mx-auto and justify-content-center classes -->
+                <li class="nav-item active" >
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact us.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="carslist.html">Our Cars</a>
+                </li>
+               
+            </ul>
+       
+            <a href="https://api.whatsapp.com/send/?phone=918698209999&text&type=phone_number&app_absent=0" class="btn btn-outline-success my-2 my-sm-0">Book Now</a>
+
+            </form>
+        </div>
+    </nav>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ <!-- Your content goes here -->
+
+  
+
+ <style>
+  /* Global styles */
+  .containeraboutus {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: aliceblue;
+      padding: 20px;
+  }
+  
+  .abouth1 {
+      text-align: left;
+      align-items: flex-start;
+  }
+  
+  .imageabouts {
+      flex: 1;
+      padding: 20px;
+  }
+  
+  .imageabouts img {
+      width: 550px;
+      height: 500px;
+      padding-top: 50px;
+  }
+  
+  .matter {
+      flex: 2; /* Adjust the ratio between image and text as needed */
+      padding: 20px;
+      padding-top: 10px;
+  }
+  
+  .matter h1 {
+      text-align: left;
+      align-items: left;
+      text-align: left;
+      align-items: flex-start;
+      font-size: 32px;
+  }
+  
+  /* Media query for screens narrower than 768px (typical mobile devices) */
+  @media (max-width: 768px) {
+      .containeraboutus {
+          flex-direction: column; /* Stack elements vertically on smaller screens */
+      }
+      .matter {
+          flex: 2; /* Adjust the ratio between image and text as needed for mobile */
+      }
+   
+    
+      .imageabouts img {
+          width: 321px;
+          height: auto;
+          padding-top: 0px;
+          
+      }
+      .matter {
+          padding-top: 10px;
+      }
+      .matter h1 {
+          font-size: 40px;
+      }
+  }
+  
+  </style>
+<style>
+  .parallax {
+   height: 300px;
+   background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-image: url('https://i.ibb.co/jL6Q062/Short-Term-Car-Rental.webp');
+   position: relative; /* Make sure the div is positioned relative for absolute positioning of text */
+
+   
+ }
+ *{
+   margin: 0%;
+   padding: 0%;
+ }
+
+ .parallax::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background color */
+   z-index: 2; /* Place it above the image */
+ }
+
+ .parallax-text {
+   position: absolute;
+   top: 50%; /* Adjust as needed to vertically center the text */
+   left: 50%; /* Adjust as needed to horizontally center the text */
+   transform: translate(-50%, -50%);
+   text-align: center;
+   color: #fff; /* Text color */
+   z-index: 2; /* Place it above the semi-transparent background */
+   white-space: nowrap;
+ }
+ @font-face {
+ font-family: 'CustomFont'; /* Choose a name for your font */
+ src: url('path-to-your-font.woff2') format('woff2'), /* Path to your font file */
+      url('path-to-your-font.woff') format('woff'); /* Path to your font file */
+ font-weight: normal;
+ font-style: normal;
+}
+
+ .parallax-text h1 {
+   font-family: 'CustomFont'; /* Choose a name for your font */
+   src:url('path-to-your-font.woff') format('woff');
+ font-size: 38px;
+ font-weight: 800;
+ text-shadow: 1px 1px 2px rgba(209, 205, 186, 0.719);
+ color: rgb(252, 250, 247);
+ 
+ 
+ /* Use the custom font followed by fallback fonts */
+}
+
+
+.parallax-text {
+   font-size: 52px;
+   font-weight: 900;
+   text-shadow: 1px 1px 2px rgba(158, 157, 152, 0.719);
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+                                               
+ }
+
+ /* Change the color for "YOUR" */
+ .your-text {
+   color:  rgb(255, 187, 0); /* Replace with your desired color code or color name */
+ }
+
+ /* Change the color for "CAR" */
+ .carfu-text {
+   color:  rgb(255, 187, 0); /* Replace with your desired color code or color name */
+ }
+
+
+ @media (max-width: 768px) {
+  
+   
+   .parallax-text h1 {
+     font-size: 24px; /* Decrease font size for mobile */
+     padding-bottom:20%;
+   }
+   
+   .parallax-text h2 {
+     font-size: 22px; /* Decrease font size for mobile */
+   }
+   
+  .parallax{
+   height: 200px;
+  }
+ }
+ </style>
+</head>
+<body>
+  <div class="parallax">
+    <div class="parallax-text">
+      <h1>About Us</h1>
+    
+  <h2 class="parallax-text">TRINADH <span class="your-text">TOURS</span> AND <span class="carfu-text">TRAVELS</span></h2>
+    </div>
+  </div>
+  <div class="containeraboutus reveal">
+    <div class="matter reveal">
+        <h1>Few Words About Us</h1>
+        <p>Welcome to Trinadh Tours and Travels, your trusted partner in travel. We are dedicated to providing exceptional transportation services with a strong focus on ethics, customer satisfaction, safety, and government protocols.</p>
+        <h1 class="Commitments">Our Commitments:</h1>
+        <ul >
+            <li ><strong>Ethics:</strong> At Trinadh Tours And Travels, we believe in conducting our business with the highest ethical standards. We prioritize transparency, honesty, and integrity in all our interactions.</li>
+            <li ><strong>Customer Satisfaction:</strong> Your comfort and satisfaction are our top priorities. We strive to exceed your expectations by offering reliable and comfortable transportation solutions tailored to your needs.</li>
+            <li ><strong>Safety:</strong> Your safety is non-negotiable. We have stringent safety protocols in place to ensure that every journey with us is secure. Our vehicles are regularly inspected and maintained to the highest standards.</li>
+            <li ><strong>Government Protocol:</strong> We strictly adhere to government regulations and protocols. Whether it's providing transportation services for government vehicles or following travel guidelines, we are committed to compliance.</li>
+            <li ><strong>Special Services:</strong> In addition to our regular services, we take pride in providing cars for government vehicles and catering to special occasions like weddings. Our fleet is versatile, ensuring we have the right vehicle for every need.</li>
+        </ul>
+    </div>
+    
+    <div class="imageabouts reveal">
+        <!-- Your image goes here -->
+        <img src="https://i.ibb.co/y057TNz/aboutimg12.png" alt="Businesswoman">
+    </div>
+</div>
+<p style="background-color: aliceblue;text-align: left;font-size: 17px;">Trinadh Tours And Travels has been serving our valued customers since 2021. Over the years, we have built a reputation for reliability and excellence in the travel industry. We look forward to serving you and making your journey a memorable one.</p>
+  
+<link
+rel="stylesheet"
+href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+crossorigin="anonymous"
+/>
+<footer>
+<div class="container reveal">
+<div class="sec aboutus">
+  <h2 style="text-align: left;padding-top: 0%">Location</h2>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15216.10016027439!2d80.6023082!3d16.5238806!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35ef7774ea491d%3A0xcc434220c944b901!2sTrinadh%20tours%20and%20travels!5e0!3m2!1sen!2sin!4v1563458123311!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+  
+  <ul class="sci">
+    <li>
+      <a href="https://www.facebook.com/profile.php?id=61551121944330&mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
+    </li>
+    
+    <li>
+      <a href="https://instagram.com/trinadhtoursandtravels?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=="><i class="fab fa-instagram"></i></a>
+    </li>
+    <li>
+      <a href="https://www.youtube.com/channel/UCf3Sx0KP91T-MJjdLYaEunA"><i class="fab fa-youtube"></i></a>
+    </li>
+    <li>
+      <a href="mailto:Trinadhtoursandtravels@gmail.com">
+        <img src="https://i.ibb.co/qphmBbT/maillog.png"style="width: 12px;heigth:15px"; alt="Gmail Logo">
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="sec quicklink">
+ 
+<div class="sec contact">
+   
+  <h2 style="text-align: left; padding-top: 0%;">Contact Us</h2>
+  <ul class="info">  
+    <li> 
+      <span><i class="fad fa-map-marker-alt"></i></span>
+      <p>
+       1-3-198, Cement Road</br>Beside Sachivalayam</br>
+        Vidhyadharapuram</br>
+        Vijayawada-520004
+      </p>
+    </li>                    
+    <li>
+        
+      <span><i class="fad fa-phone"></i></span>
+      <p>
+        <a href="tel:+919493928241">+91 8698209999</a> <br />
+        <a href="tel:+919441411137">+91 8885277553</a>
+      </p>
+    </li>
+    <li>
+      <span><i class="fad fa-envelope"></i></span>
+      <p>
+        <a href="mailto:TRINADHTOURSANDTRAVELS@GMAIL.COM">Trinadhtoursandtravels@gmail.com</a>
+
+        
+      </p>
+    </li> 
+  </ul> 
+</div>
+</div>
+
+  <div class="logo-container">
+    <a href="index.html"><img src="https://i.ibb.co/QNXMVXm/logo-modified.png" alt="log" class="logo123"></a>
+  </div>
+
+</footer>
+    <div class="copyrightText">
+    <p>@ 2023 Trinadh Tours and Travels | Designed By JS Projects.</p>
+    </div>
+    <script type="text/javascript">
+      window.addEventListener('scroll', reveal);
+    
+      function reveal() {
+        var reveals = document.querySelectorAll('.reveal');
+    
+        for (var i = 0; i < reveals.length; i++) {
+    
+          var windowheight = window.innerHeight;
+          var revealtop = reveals[i].getBoundingClientRect().top;
+          var revealpoint = 150;
+    
+          if (revealtop < windowheight - revealpoint) {
+            reveals[i].classList.add('active');
+          } else {
+            reveals[i].classList.remove('active');
+          }
+        }
+      }
+    </script>
+
+</body>
+</html>
