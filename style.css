@@ -197,7 +197,7 @@ font-family: 'Gabriola', sans-serif;
 }
 
 /* Increase font size for larger screens */
-@media (min-width: 769px) {
+@media (max-width: 768px) {
 .text-overlays12 h2 {
     font-size: 62px; /* Adjust the font size as needed */
     /* Add text shadow */
