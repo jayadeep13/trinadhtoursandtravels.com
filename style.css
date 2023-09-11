@@ -18,7 +18,7 @@
        
         @media (max-width: 768px) {
     .navbar-brand {
-        font-size: 24px;
+        font-size: 22px;
         font-family: 'Berkshire Swash'; /* Decrease font size for mobile view */
     }
 }
