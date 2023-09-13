@@ -183,6 +183,13 @@ width: 100%;
 max-width: 100%;
 height: 600px;
 }
+@font-face {
+  font-family: 'Gabriola';
+  src: url('path-to-font/Gabriola.woff2') format('woff2'),
+       url('path-to-font/Gabriola.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 .text-overlays12 {
 position: absolute;
