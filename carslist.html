@@ -930,6 +930,36 @@
    <a href="https://api.whatsapp.com/send/?phone=918698209999&text&type=phone_number&app_absent=0" class="btn btn-outline-success my-2 my-sm-0">Book Now</a>
 
 </div>
+        <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const tabButtons12 = document.querySelectorAll('.tab-button');
+    const tabContents12 = document.querySelectorAll('.content10');
+
+    tabButtons12.forEach((button) => {
+      button.addEventListener('click', () => {
+        const tab = button.dataset.tab;
+
+        // Remove 'active' class from all buttons
+        tabButtons12.forEach((btn) => {
+          btn.classList.remove('active');
+        });
+
+        // Hide all content sections and display the selected one
+        tabContents12.forEach((content) => {
+          if (content.dataset.tab === tab) {
+            content.style.display = 'block';
+          } else {
+            content.style.display = 'none';
+          }
+        });
+
+        // Add 'active' class to the clicked button
+        button.classList.add('active');
+      });
+    });
+  });
+</script>
+
 <div class="car reveal">
   <!-- Benz c 220 -->
  <img src="https://i.ibb.co/n0bMBBq/benz-c-220.jpg" alt="Car 2">
