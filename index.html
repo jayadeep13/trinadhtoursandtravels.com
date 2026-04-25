@@ -178,36 +178,60 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
  <!-- Your content goes here -->
  <link href="https://fonts.cdnfonts.com/css/gabriola" rel="stylesheet">
- <div class="slider-container">
-  <div class="slider">
-      <div class="slide">
-          <img src="images/home1.png" alt="Image 1" class="image">         
+ <div class="hero-carousel" aria-label="Homepage hero slider">
+  <div class="hero-track">
+      <div class="hero-slide hero-slide-one">
+          <picture class="hero-media">
+            <source media="(max-width: 768px)" srcset="images/mob1.png">
+            <img src="images/home28.png" alt="Trinadh Tours and Travels welcome banner" class="hero-image">
+          </picture>
       </div>    
-      <div class="slide">
-          <img src="https://i.ibb.co/5xdVDB0/best-CAR-for-rental-3.png " alt="Image 2" class="image">     
+      <div class="hero-slide hero-slide-two">
+          <picture class="hero-media">
+            <source media="(max-width: 768px)" srcset="images/mob2.png">
+            <img src="images/home2or.png" alt="Trinadh Tours and Travels explore banner" class="hero-image">
+          </picture>
       </div>
-      <div class="slide">
-          <img src="images/home33.png" alt="Image 3" class="image">
-         
+      <div class="hero-slide hero-slide-three">
+          <picture class="hero-media">
+            <source media="(max-width: 768px)" srcset="images/mob3.png">
+            <img src="images/des3.png" alt="Trinadh Tours and Travels fleet banner" class="hero-image">
+          </picture>
       </div>
   </div>
 </div>
 
 
 <script>
-  const slider = document.querySelector('.slider');
-  const slides = document.querySelectorAll('.slide');
-  let counter = 0;
+  const heroTrack = document.querySelector('.hero-track');
+  const heroSlides = Array.from(document.querySelectorAll('.hero-slide'));
 
-  function moveSlide() {
-      counter++;
-      if (counter === slides.length) {
-          counter = 0;
+  if (heroTrack && heroSlides.length > 1) {
+    let isHeroAnimating = false;
+
+    function moveHeroSlide() {
+      if (isHeroAnimating) {
+        return;
       }
-      slider.style.transform = `translateX(-${counter * 100}%)`;
-  }
 
-  setInterval(moveSlide, 5000); // Change slide every 5 seconds
+      isHeroAnimating = true;
+      heroTrack.style.transition = 'transform 0.9s ease';
+      heroTrack.style.transform = 'translateX(-100%)';
+    }
+
+    heroTrack.addEventListener('transitionend', () => {
+      if (!isHeroAnimating) {
+        return;
+      }
+
+      heroTrack.appendChild(heroTrack.firstElementChild);
+      heroTrack.style.transition = 'none';
+      heroTrack.style.transform = 'translateX(0)';
+      isHeroAnimating = false;
+    });
+
+    setInterval(moveHeroSlide, 4500);
+  }
 </script>
 <style>
   .needhelp{
@@ -216,6 +240,56 @@
     font-family: sans-serif;
     font-style: oblique;
    
+  }
+
+  .hero-carousel {
+    position: relative;
+    width: 100%;
+    height: 680px;
+    overflow: hidden;
+    background: #ffffff;
+    line-height: 0;
+  }
+
+  .hero-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.9s ease;
+    will-change: transform;
+  }
+
+  .hero-slide {
+    min-width: 100%;
+    flex: 0 0 100%;
+    height: 100%;
+    background: #ffffff;
+  }
+
+  .hero-media {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+    background: #ffffff;
+  }
+
+  .hero-slide-one .hero-image {
+    object-position: center top;
+  }
+
+  .hero-slide-two .hero-image {
+    object-position: center center;
+  }
+
+  .hero-slide-three .hero-image {
+    object-position: center top;
   }
 
   @media (max-width: 768px){
@@ -228,8 +302,42 @@
     font-family: sans-serif;
     font-style: oblique;
   }
-.slider-container{
-    height: 350px;
+
+.hero-carousel{
+    height: 520px;
+    background: #ffffff;
+  }
+
+  .hero-track {
+    height: 100%;
+  }
+
+  .hero-slide {
+    height: 100%;
+    background: #ffffff;
+  }
+
+  .hero-media {
+    height: 100%;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: #ffffff;
+  }
+
+  .hero-slide-one .hero-image {
+    object-position: 55% top;
+  }
+
+  .hero-slide-two .hero-image {
+    object-position: center center;
+  }
+
+  .hero-slide-three .hero-image {
+    object-position: 62% top;
   }
   }
      .getthe {
@@ -252,114 +360,6 @@
 
 
 </style>
-<style>
-  /* Styles for laptops and desktops (screen width 768px and above) */
-  @media screen and (min-width: 768px) {
-      .slider-container143 {
-          position: relative;
-          width: 100%;
-          height: 600px;
-          overflow: hidden;
-      }
-
-      .text-overlays143 h2 {
-          padding-top: 160px;
-          
-      }
-
-      .slider143 {
-          display: flex;
-          transition: transform 1s ease-in-out;
-      }
-
-      .slide143 {
-          width: 100%;
-          object-fit: cover; 
-          flex-shrink: 0;
-          position: relative;
-      }
-
-      .slide143 img {
-          width: 100%;
-          max-height: 600px; /* Use max-height to maintain aspect ratio */
-          height: 600px;
-      }
-
-      .text-overlays143 {
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          color: white;
-          display: flex;
-          background-color: rgba(0, 0, 0, 0.5);
-          flex-direction: column;
-          justify-content: space-between;
-          align-items: center;
-          text-align: center;
-      }
-
-      /* Increase font size for larger screens */
-      .text-overlays143 h2 {
-          font-size: 42px; /* Adjust the font size as needed */
-        /* Add text shadow */
-          /* Increase letter spacing for unique style */
-          font-weight: 900;
-          text-shadow: 1px 4px 2px rgb(0, 8, 43);/* Add font weight for emphasis */
-          text-transform: uppercase;
-      }
-
-      .text-overlays143 p {
-          font-size: 28px;
-          margin: 0; /* Remove default margin */
-          padding: 10px 0; /* Add some padding at the bottom */
-          text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.7); /* Add text shadow */
-          /* Add italic style for uniqueness */
-      }
-  }
-
-  /* Styles for mobile devices (screen width up to 767px) */
-  @media screen and (max-width: 767px) {
-      .slider-container143 {
-          display: none; /* Hide the slider container on mobile devices */
-      }
-  }
-</style>
-<div class="slider-container143">
-  <div class="slider143">
-      <div class="slide143">
-          <img src="images/home1.png" alt="Image 1" class="image143">         
-          
-      </div>    
-      <div class="slide143">
-           <img src="https://i.ibb.co/Gv9Xv0g/prakasam-barrage.jpg" alt="Image 2" class="image143">
-          <div class="text-overlays143">
-              <h2>AP'S Largest Car Travels with<span class="carfu-text">100+ vehicles</span></h2>      
-          </div> 
-        
-      </div>
-      <div class="slide143">
-          <img src="images/home33.png" alt="Image 3" class="image143">
-        
-      </div>
-  </div>
-</div>
-<script>
-  const slider143 = document.querySelector('.slider143');
-  const slides143 = document.querySelectorAll('.slide143');
-  let counter143 = 0;
-
-  function moveSlide143() {
-      counter143++;
-      if (counter143 === slides143.length) {
-          counter143 = 0;
-      }
-      slider143.style.transform = `translateX(-${counter143 * 100}%)`;
-  }
-
-  setInterval(moveSlide143, 5000); // Change slide every 5 seconds
-</script>
 
 <p class="needhelp">Contact Us <a href="tel:+918698209999">+91 8698209999 </a> <a href="tel:+918885277553">+91 8885277553</a></p>
 
@@ -1338,7 +1338,7 @@ crossorigin="anonymous"
 
 </footer>
 <div class="copyrightText">
-  <p>@ 2023 Trinadh Tours and Travels | Designed By P &amp; J Technologies <span class="designer-logo-placeholder">Logo</span></p>
+  <p>@ 2023 Trinadh Tours and Travels | Designed By P &amp; J Technologies </p>
   </div>
     <script type="text/javascript">
       window.addEventListener('scroll', reveal);
