@@ -182,14 +182,14 @@
   <div class="hero-track">
       <div class="hero-slide hero-slide-one">
           <picture class="hero-media">
-            <source media="(max-width: 768px)" srcset="images/mob1.png">
+            <source media="(max-width: 768px)" srcset="images/mob23.png">
             <img src="images/home28.png" alt="Trinadh Tours and Travels welcome banner" class="hero-image">
           </picture>
       </div>    
       <div class="hero-slide hero-slide-two">
           <picture class="hero-media">
             <source media="(max-width: 768px)" srcset="images/mob2.png">
-            <img src="images/home2or.png" alt="Trinadh Tours and Travels explore banner" class="hero-image">
+            <img src="images/ho1.png" alt="Trinadh Tours and Travels explore banner" class="hero-image">
           </picture>
       </div>
       <div class="hero-slide hero-slide-three">
@@ -292,7 +292,7 @@
     object-position: center top;
   }
 
-  @media (max-width: 768px){
+@media (max-width: 768px){
 .needhelp {
     padding-top: 0px;
     font-size: 19px;
@@ -304,40 +304,42 @@
   }
 
 .hero-carousel{
-    height: 520px;
+    height: auto;
+    min-height: 0;
     background: #ffffff;
   }
 
   .hero-track {
-    height: 100%;
+    height: auto;
+    align-items: flex-start;
   }
 
   .hero-slide {
-    height: 100%;
+    height: auto;
     background: #ffffff;
   }
 
   .hero-media {
-    height: 100%;
+    height: auto;
   }
 
   .hero-image {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
     background: #ffffff;
   }
 
   .hero-slide-one .hero-image {
-    object-position: 55% top;
+    object-position: center top;
   }
 
   .hero-slide-two .hero-image {
-    object-position: center center;
+    object-position: center top;
   }
 
   .hero-slide-three .hero-image {
-    object-position: 62% top;
+    object-position: center top;
   }
   }
      .getthe {
@@ -376,7 +378,7 @@
 <div class="car-list reveal">
   <!-- Etios -->
   <div class="car reveal">
-      <img src="https://i.ibb.co/12vdJ36/toyota-etios-car-rental-services-1000x1000.webp" alt="Car 2" >
+      <img src="images/et.png" alt="Car 2" >
     
       <div class="car-details">
         
@@ -499,7 +501,7 @@
   </div>
   <div class="car reveal">
     <!-- Dezire/etios -->
-   <img src="https://i.ibb.co/LhVkzxz/PEARL-ARCTIC-WHITE-939393.webp" alt="Car 2">
+   <img src="images/SWIFT.png" alt="Car 2">
    <div class="car-details">
      
      <div class="car-price">SWIFT DEZIRE</div>
@@ -620,7 +622,7 @@
  
   <div class="car reveal">
     <!--Innova -->
-   <img src="https://i.ibb.co/LCZSJRB/PHOTO-2023-09-07-18-06-27.jpg" alt="Car 2">
+   <img src="images/INNOVA.png" alt="Car 2">
    <div class="car-details">
      <div class="car-price">Innova</div>
      <div class="car-name">Car-3</div>
@@ -741,7 +743,7 @@
 </div>
 <div class="car reveal">
   <!-- crysta -->
- <img src="https://i.ibb.co/J521ZCf/c-h-6-500x500.webp" alt="Car 2">
+ <img src="images/crysta.png" alt="Car 2">
  <div class="car-details">
  
  <div class="car-price">CRYSTA</div>
@@ -1011,7 +1013,7 @@ tabButtons12.forEach((button) => {
 </br>
 <div class="cousnt123654">
     <a href="carslist.html">
-        <button class="buncars1304 reveal">View all cars</button>
+        <button class="buncars1304 reveal">View all cars & Buses</button>
     </a>
 </div>
 </br>
@@ -1337,9 +1339,15 @@ crossorigin="anonymous"
   </div>
 
 </footer>
-<div class="copyrightText">
-  <p>@ 2023 Trinadh Tours and Travels | Designed By P &amp; J Technologies </p>
-  </div>
+ <div class="copyrightText">
+    <p>
+        @ 2023 Trinadh Tours and Travels | Designed By 
+        <a href="https://www.pandjtechnologies.com/" target="_blank" style="text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 5px;">
+            <img src="images/pjlogo.png" alt="P & J Logo" style="height: 20px; width: auto;"> 
+            P & J Technologies
+        </a>
+    </p>
+</div>
     <script type="text/javascript">
       window.addEventListener('scroll', reveal);
     
